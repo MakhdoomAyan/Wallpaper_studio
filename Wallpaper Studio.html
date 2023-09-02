@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  <title>Wallpaper studio</title>
+</head>
+<style>
+  body {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(data:image/jpeg;base64,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);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+
+
+  }
+
+  p {
+    color: aliceblue;
+  }
+
+  h2 {
+    color: lightgoldenrodyellow;
+  }
+
+  /* * {
+    outline: 1px solid #f00 !important;
+  } */
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light dark border-bottom position-sticky header color-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Wallpaper Studio.html" style="font-family: sans-serif;color: rgba(0, 0, 0, 0.719);">WALLPAPER <span
+          style="color: darkred;font-family: sans-serif;"><b />STUDIO</span> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-danger" aria-current="page" href="art.html"><i class="bi bi-palette "></i> Art (Gallery)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-danger" href="introduction.html"><i class="bi bi-person-fill"></i> Artist (Introduction)</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
+
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#"></a></li>
+            <li><a class="dropdown-item" href="#"></a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#"></a></li>
+          </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+          <button class="btn btn-outline-light bg-danger" type="submit">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-xxl">
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://wallpaperaccess.com/full/104180.jpg" class="d-block w-100 " alt="..." height="500px">
+          <div class="carousel-caption d-none d-md-block">
+            <h4 style="color: rgb(81, 37, 37);"><b>WALLPAPER <span style="color: darkred;">STUDIO</span></b></h4>
+            <p><b></b></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://wallpaperaccess.com/full/104149.jpg"
+            style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(); background-repeat: no-repeat;"
+            class="d-block w-100" alt="..." height="500px">
+          <div class="carousel-caption d-none d-md-block">
+            <h4 style="color: rgba(226, 235, 62, 0.692); "><b>WALLPAPER <span
+                  style="color: rgb(88, 85, 239);">STUDIO</span></b></h4>
+            <p><b></b></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://wallpapercave.com/wp/wp2931793.jpg" class="d-block w-100" alt="..." height="500px">
+          <div class="carousel-caption d-none d-md-block">
+            <h4 style="color: rgb(192, 173, 173); "><b>WALLPAPER <span
+                  style="color: rgb(192, 173, 173);">STUDIO</span></b></h4>
+            <p><b></b></p>
+
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="row my-4 ">
+      <h1 class="my-4 " style="color: aliceblue;">Top <span style="color: rgb(0, 0, 0); "> 10</span> Expensive Painting</h1>
+      <div class="col-lg-4">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc03b9HDKuod-AjYvjDj64cxarKF85QTCUdtCPTb5uM7YlesDP"
+          class="bd-placeholder-img rounded-circle justify-content-center d-flex" width="140" height="140" alt="">
+
+        <h2>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Salvator Mundi</font>
+          </font>
+        </h2>
+        <p>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Salvator Mundi is a painting attributed in whole or in part to the Italian High Renaissance artist Leonardo da Vinci, dated to c. 1499–1510.</font>
+          </font>
+        </p>
+        <p><a class="btn btn-secondary" href="#">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit; color: yellow;">View details</font>
+            </font>
+          </a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Masteripiece.jpg"
+          class="bd-placeholder-img rounded-circle" width="140" height="140" alt="">
+
+        <h2>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Masterpiece
+            </font>
+          </font>
+        </h2>
+        <p>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Masterpiece is a 1962 pop art painting by Roy Lichtenstein that uses his classic Ben-Day dots and narrative content contained within a speech balloon. In 2017, the painting sold for $165 million</font>
+          </font>
+        </p>
+        <p><a class="btn btn-secondary" href="#">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit; color: red;">View details</font>
+            </font>
+          </a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/3/33/Gustav_Klimt_047.jpg"
+          class="bd-placeholder-img rounded-circle" width="140" height="140" alt="">
+
+        <h2>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Adele Bloch-Bauer II</font>
+          </font>
+        </h2>
+        <p>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Portrait of Adele Bloch-Bauer II is a 1912 painting by Gustav Klimt. The work is a portrait of Adele Bloch-Bauer, a Vienna socialite who was a patron and close friend of Klimt. In 1907, Klimt completed an earlier portrait of Bloch-Bauer</font>
+          </font>
+        </p>
+        <p><a class="btn btn-secondary" href="#">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;color: aquamarine;">View details</font>
+            </font>
+          </a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">1. Leonardo Da Vinci, Mona Lisa, 1503–19</font>
+          </font><span class="text-muted">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit; color: darkred;">WALLPAPER STUDIO</font>
+            </font>
+          </span>
+        </h2>
+        <p class="lead">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Painted between 1503 and 1517, Da Vinci’s alluring portrait has been dogged by two questions since the day it was made: Who’s the subject and why is she smiling? A number of theories for the former have been proffered over the years: That she’s the wife of the Florentine merchant Francesco di Bartolomeo del Giocondo (ergo, the work’s alternative title, La Gioconda); that she's Leonardo’s mother, Caterina, conjured from Leonardo's boyhood memories of her; and finally, that it's a self-portrait in drag. As for that famous smile, its enigmatic quality has driven people crazy for centuries. Whatever the reason, Mona Lisa’s look of preternatural calm comports with the idealized landscape behind her, which dissolves into the distance through Leonardo’s use of atmospheric perspective.
+            </font>
+            <font style="vertical-align: inherit;"> </font>
+            <font style="vertical-align: inherit;"></font>
+            <font style="vertical-align: inherit;"></font>
+          </font>
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://media.timeout.com/images/103166731/1024/768/image.jpg"
+          class="bd-placeholder-img bd-placeholder-img-lg rounded-3 border border-3 border-white featurette-image img-fluid mx-auto" width="500" height="500"
+          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">2. Vincent van Gogh, The Starry Night, 1889</font>
+          </font><span class="text-muted">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit; color: darkred;">WALLPAPER STUDIO</font>
+            </font>
+          </span>
+        </h2>
+        <p class="lead">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Vincent Van Gogh’s most popular painting, The Starry Night was created by Van Gogh at the asylum in Saint-Rémy, where he’d committed himself in 1889. Indeed, The Starry Night seems to reflect his turbulent state of mind at the time, as the night sky comes alive with swirls and orbs of frenetically applied brush marks springing from the yin and yang of his personal demons and awe of nature.</font>
+          </font>
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="https://media.timeout.com/images/103166739/1024/768/image.jpg"
+          class="bd-placeholder-img bd-placeholder-img-lg rounded-3 border border-3 border-white featurette-image img-fluid mx-auto" width="500" height="500"
+          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">3. Johannes Vermeer, Girl with a Pearl Earring, 1665 </font>
+          </font><span class="text-muted">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit; color: darkred;">WALLPAPER STUDIO</font>
+            </font>
+          </span>
+        </h2>
+        <p class="lead">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;"> Johannes Vermeer’s 1665 study of a young woman is startlingly real and startlingly modern, almost as if it were a photograph. This gets into the debate over whether or not Vermeer employed a pre-photographic device called a camera obscura to create the image. Leaving that aside, the sitter is unknown, though it’s been speculated that she might have been Vermeer's maid. He portrays her looking over her shoulder, locking her eyes with the viewer as if attempting to establish an intimate connection across the centuries. Technically speaking, Girl isn’t a portrait, but rather an example of the Dutch genre called a tronie—a headshot meant more as still life of facial features than as an attempt to capture a likeness.
+
+            </font>
+            <font style="vertical-align: inherit;"></font>
+          </font>
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://media.timeout.com/images/103166735/1024/768/image.jpg"
+          class="bd-placeholder-img bd-placeholder-img-lg rounded-3 border border-3 border-white featurette-image img-fluid mx-auto" width="500" height="500"
+          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">4. Gustav Klimt, The Kiss, 1907–1908</font>
+          </font><span class="text-muted">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit; color: darkred;">WALLPAPER STUDIO</font>
+            </font>
+          </span>
+        </h2>
+        <p class="lead">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Opulently gilded and extravagantly patterned, The Kiss, Gustav Klimt’s fin-de-siècle portrayal of intimacy, is a mix of Symbolism and Vienna Jugendstil, the Austrian variant of Art Nouveau. Klimt depicts his subjects as mythical figures made modern by luxuriant surfaces of up-to-the moment graphic motifs. The work is a highpoint of the artist’s Golden Phase between 1899 and 1910 when he often used gold leaf—a technique inspired by a 1903 trip to the Basilica di San Vitale in Ravenna, Italy, where he saw the church’s famed Byzantine mosaics.            </font>
+            <font style="vertical-align: inherit;"> </font>
+            <font style="vertical-align: inherit;"> </font>
+            <font style="vertical-align: inherit;"></font>
+          </font>
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://media.timeout.com/images/103166743/1024/768/image.jpg"
+          class="bd-placeholder-img bd-placeholder-img-lg rounded-3 border border-3 border-white featurette-image img-fluid mx-auto" width="500" height="500"
+          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">5. James Abbott McNeill Whistler, Arrangement in Grey and Black No. 1, 1871 </font>
+          </font><span class="text-muted">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit; color: darkred;">WALLPAPER STUDIO</font>
+            </font>
+          </span>
+        </h2>
+        <p class="lead">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Whistler’s Mother, or Arrangement in Grey and Black No. 1, as it’s actually titled, speaks to the artist’s ambition to pursue art for art’s sake. James Abbott McNeill Whistler painted the work in his London studio in 1871, and in it, the formality of portraiture becomes an essay in form. Whistler’s mother Anna is pictured as one of several elements locked into an arrangement of right angles. Her severe expression fits in with the rigidity of the composition, and it’s somewhat ironic to note that despite Whistler’s formalist intentions, the painting became a symbol of motherhood.</font>
+          </font>
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="https://media.timeout.com/images/103166741/1024/768/image.jpg"
+          class="bd-placeholder-img bd-placeholder-img-lg rounded-3 border border-3 border-white featurette-image img-fluid mx-auto" width="500" height="500"
+          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">6. Jan van Eyck, The Arnolfini Portrait, 1434 </font>
+          </font><span class="text-muted">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit; color: darkred;">WALLPAPER STUDIO</font>
+            </font>
+          </span>
+        </h2>
+        <p class="lead">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;"> </font>
+            <font style="vertical-align: inherit;">One of the most significant works produced during the Northern Renaissance, this composition is believed to be one of the first paintings executed in oils. A full-length double portrait, it reputedly portrays an Italian merchant and a woman who may or may not be his bride. In 1934, the celebrated art historian Erwin Panofsky proposed that the painting is actually a wedding contract. What can be reliably said is that the piece is one of the first depictions of an interior using orthogonal perspective to create a sense of space that seems contiguous with the viewer’s own; it feels like a painting you could step into.
+            </font>
+          </font>
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://media.timeout.com/images/103166745/1024/768/image.jpg"
+          class="bd-placeholder-img bd-placeholder-img-lg rounded-3 border border-3 border-white featurette-image img-fluid mx-auto" width="500" height="500"
+          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></img>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+
+  </div><!-- /.container -->
+
+
+
+
+  </main>
+</body>
+
+</html>
