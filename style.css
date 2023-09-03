@@ -2,8 +2,8 @@
     border-bottom: 1px solid #ffffff14;
 }
 
-.dark{
-    background-color: rgba(0, 0, 0, 0);   
+.dark {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .header {
@@ -12,16 +12,19 @@
     width: 100%;
     top: 0 !important;
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     background-color: transparent;
 }
-body::-webkit-scrollbar-thumb{
-    background:linear-gradient(red,blue,green,yellow)
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(red, blue, green, yellow)
 }
 
 .zoom-img-icon {
     transition: transform 0.2s;
-  }
-  .zoom-img-icon:hover {
+}
+
+.zoom-img-icon:hover {
     transform: scale(1.2);
-  }
+}
